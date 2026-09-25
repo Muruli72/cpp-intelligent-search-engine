@@ -45,11 +45,16 @@ public:
         const std::string& filename,
         const std::string& word
     );
-    std::vector<std::pair<std::string, double>> rankDocuments(
-    const std::vector<std::string>& documents,
-    const std::vector<std::string>& queryWords
-);
 
+    double calculateCosineSimilarity(
+        const std::string& filename,
+        const std::vector<std::string>& queryWords
+    );
+
+    std::vector<std::pair<std::string, double>> rankDocuments(
+        const std::vector<std::string>& documents,
+        const std::vector<std::string>& queryWords
+    );
 };
 
 #endif
